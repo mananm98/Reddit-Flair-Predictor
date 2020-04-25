@@ -3,19 +3,13 @@
 
 # In[1]:
 
-
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
+from numpy import argmax
 import re
 import nltk
 import pickle
 from sklearn.preprocessing import LabelEncoder
 from keras.preprocessing.text import Tokenizer
 from keras.preprocessing.sequence import pad_sequences
-from keras.layers import *
-from keras.optimizers import Adam
-from keras.models import Model
 from keras.models import load_model
 import praw
 import h5py
@@ -136,7 +130,7 @@ def predict_flair(model,url,tk,le):
     X_test = tk.texts_to_sequences(text)
     X_test_pad = pad_sequences(X_test,maxlen = 300, padding = 'post',truncating = 'post')
     prediction = model.predict(X_test_pad)
-    prediction = np.argmax(prediction,axis = 1)
+    prediction = argmax(prediction,axis = 1)
     prediction = le.inverse_transform(prediction)[0]
 
     return prediction
