@@ -101,7 +101,7 @@ After Extraction and cleaning of dataset I applied various Machine Learning and 
 | Model      | Test Accuracy |                                                     
 | :---:        |    :----:   |
 | Word Embeddings + CNN      | **0.8477611940298507**      | 
-| LSTM   | 0.7014925373134329       | 
+| LSTM   | 0.6835820895522388       | 
 | Bidirectional LSTM      | 0.764179104477612      | 
 | Hybrid-model CNN-LSTM   |  0.7522388059701492        |
 
