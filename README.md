@@ -13,7 +13,7 @@ A web application to detect flair of a given Reddit r/india post. The applicatio
 ## Getting started
 Open Terminal
 - `git clone https://github.com/mananm98/Reddit-Flair-Predictor.git`
-- `cd web-app`
+- `cd Web-app`
 - `virtualenv venv`
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
