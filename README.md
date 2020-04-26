@@ -95,10 +95,14 @@ After Extraction and cleaning of dataset I applied various Machine Learning and 
   ### 4. Hybrid-model CNN-LSTM
  - The idea was to combine the advantages of both models. The CNN would act as an effective feature extractor which would pass only the essential information to LSTM. And then LSTM model would learn interesting dependencies in data.
 
+  
 | Model      | Test Accuracy |                                                     
 | :---:        |    :----:   |
 | Word Embeddings + CNN      | **0.8477611940298507**      | 
 | LSTM   | 0.7014925373134329       | 
 | Bidirectional LSTM      | 0.764179104477612      | 
 | Hybrid-model CNN-LSTM   |  0.7522388059701492        |
+
+- LSTM based models lagged behind CNN and even traditional ML models like Logistic Regression and LinearSVC. I think the reason is less data LSTMs require large data to perform well.
+- The CNN model performed the best and was deployed in the [web-app](https://predict-this-flair.herokuapp.com/) :tada:
 
