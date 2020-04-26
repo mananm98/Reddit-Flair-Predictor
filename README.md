@@ -17,8 +17,7 @@ Open Terminal
 - `virtualenv venv`
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
-- `python app1.py`
-Open the displayed URL on your browser to run application
+- `python app1.py`Open the displayed URL on your browser to run application
 
 ## Approach :bulb:
 
@@ -83,11 +82,23 @@ After Extraction and cleaning of dataset I applied various Machine Learning and 
 - I used the folowing models :- 
 ### 1. Word Embeddings + CNN 
  - CNNs are well known for there location invariant feature extraction capability, So I decided to use CNN model for text classification. In hope that CNN model will learn some useful filters, which can be used to distinguish between different text categories 
-**Accuracy**
- - **0.8477611940298507**
  
  ### 2. LSTMs
   - LSTMS perform really well on many NLP tasks, because of their ability to remember past information and learn context. While the CNN model tries to classify by learning distinguishing tokens or sequence of tokens. LSTMs on the other hand try to understand the text, they can learn relationships between tokens.
   - But LSTMs didn't perform as accepted, I think the reason for low accuracy is less data
-  **Accuracy**
- - 0.7014925373134329
+
+ 
+  ### 3. Bidirectional LSTMs
+  - Bidirectional LSTMs, are more effective than unidirectional ones. This is because training two LSTMs on the same input in forward and reverse direction allows the network to learn better context.
+  - Bidirectional LSTM performed better than a unidirectional LSTM.
+  
+  ### 4. Hybrid-model CNN-LSTM
+ - The idea was to combine the advantages of both models. The CNN would act as an effective feature extractor which would pass only the essential information to LSTM. And then LSTM model would learn interesting dependencies in data.
+
+| Model      | Test Accuracy |                                                     
+| :---:        |    :----:   |
+| Word Embeddings + CNN      | **0.8477611940298507**      | 
+| LSTM   | 0.7014925373134329       | 
+| Bidirectional LSTM      | 0.764179104477612      | 
+| Hybrid-model CNN-LSTM   |  0.7522388059701492        |
+
