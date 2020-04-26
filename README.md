@@ -103,7 +103,7 @@ After Extraction and cleaning of dataset I applied various Machine Learning and 
 | Word Embeddings + CNN      | **0.8477611940298507**      | 
 | LSTM   | 0.6835820895522388       | 
 | Bidirectional LSTM      | 0.764179104477612      | 
-| Hybrid-model CNN-LSTM   |  0.7522388059701492        |
+| Hybrid-model CNN-LSTM   |  0.7492537313432835        |
 
 - LSTM based models lagged behind CNN and even traditional ML models like Logistic Regression and LinearSVC. I think the reason is less data LSTMs require large data to perform well.
 - The CNN model performed the best and was deployed in the [web-app](https://predict-this-flair.herokuapp.com/) :tada:
