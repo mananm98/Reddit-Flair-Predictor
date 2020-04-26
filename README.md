@@ -17,7 +17,9 @@ Open Terminal
 - `virtualenv venv`
 - `source venv/bin/activate`
 - `pip install -r requirements.txt`
-- `python app1.py`Open the displayed URL on your browser to run application
+- `python app1.py`  
+
+Open the displayed URL on your browser to run application
 
 ## Approach :bulb:
 
