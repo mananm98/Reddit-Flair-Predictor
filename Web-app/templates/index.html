@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Reddit Flair Predictor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+      .heading{font-weight: 100;
+      font-size: 4em;
+    text-shadow: 1px 1px 5px black}
+
+      .text{ font-size : 32px;
+        font-style: italic;
+     }
+
+     .text2{
+       font-size: 24px;
+       font-style: normal;
+       color: green;
+       font-family: normal;
+     }
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="heading">Reddit Flair Predictor</h1>
+          <p>Give a Reddit Post url from r/india </p>
+        </div>
+      </div>
+
+
+
+      <form class="form-inline" action="/" method="POST">
+        <div class="form-group">
+          <label> <b> URL : &nbsp;&nbsp; </b>  </label>
+          <input class="form-control" type="text" name="post_url">
+       </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      {% if predicted_flair %}
+        <div class="row">
+          <div class="col-sm-8">
+            <br>
+            <br>
+            <p class="text"> Predicted Flair : </p>
+
+
+          <p class="text2"><b>{{ predicted_flair }}</b> </p>
+        </div>
+      </div>
+      {% endif %}
+
+   </div>
+  </body>
+</html>>
