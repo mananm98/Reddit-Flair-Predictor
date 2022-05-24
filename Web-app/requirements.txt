@@ -9,7 +9,7 @@ nltk==3.4.5
 numpy==1.18.3
 praw==6.5.1
 sklearn==0.0
-tensorflow==1.15.2
+tensorflow==2.6.4
 tensorflow-estimator==1.14
 Click==7.0
 itsdangerous==1.1.0
